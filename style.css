@@ -1,0 +1,467 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+#burger {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    padding: 40px 0;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+}
+
+nav .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+nav .list a {
+    margin: 0 8px;
+}
+
+nav .list a:hover {
+    color: #fff;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: url('img/bg-masthead.jpg') no-repeat;
+    background-size: cover;
+}
+
+.main .container {
+    max-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    background: #000;
+}
+
+.main h1 {
+    margin: 0;
+    color: rgba(255, 255, 255, .5);
+    font-size: 120px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.main p {
+    margin: 0;
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    text-align: center;
+}
+
+.main .btn {
+    margin: 40px 0 0 0;
+    padding: 18px 36px;
+    background: #64a19d;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: .5s ease-in-out;
+}
+
+.main .btn:hover {
+    background: #4f837f;
+}
+
+.about {
+    width: 100%;
+    background: linear-gradient(to bottom, #161616 0, rgba(22, 22, 22, .9) 75%, rgba(22, 22, 22, .8) 100%);
+}
+
+.about .container {
+    margin: 0 auto;
+    padding: 140px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about .about-info {
+    width: 100%;
+    max-width: 640px;
+    padding: 0 0 60px 0;
+}
+
+.about .about-info h1 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.about .about-info p {
+    color: rgba(255, 255, 255, .5);
+}
+
+.about .about-info a {
+    color: #64a19d;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+.about .about-info a:hover {
+    color: #3c6360;
+}
+
+.about .about-pic {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.about .about-pic img, .projects .projects-pic img, .project-cards .box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.projects {
+    width: 100%;
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.projects .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .projects-pic {
+    width: 100%;
+    max-width: 700px;
+}
+
+.projects .projects-text {
+    width: 100%;
+    max-width: 300px;
+    border-left: 7px solid #64a19d;
+}
+
+.projects .projects-text h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.projects .projects-text p {
+    color: rgba(0, 0, 0, .5);
+}
+
+.projects .projects-text h4, .projects .projects-text p {
+    margin-left: 20px;
+}
+
+.project-cards {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.project-cards .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-cards .box {
+    width: 100%;
+    max-width: 50%;
+    height: 340px;
+}
+
+.project-cards .box:nth-child(2), .project-cards .box:nth-child(3) {
+    background: #161616;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-cards .box:nth-child(3) {
+    text-align: right;
+}
+
+.project-cards .box .rt {
+    display: inline-block;
+}
+
+.project-cards .box h4 {
+    margin: 0;
+    color: #fff;
+}
+
+.project-cards .box hr {
+    width: 30%;
+    margin: 0;
+    border: 2px solid #64a19d;
+}
+
+.project-cards .box p {
+    margin: 8px 0 14px 0;
+    color: rgba(255, 255, 255, .5);
+}
+
+.project-cards .box .desc {
+    width: 100%;
+    max-width: 380px;
+}
+
+.contact {
+    width: 100%;
+    padding: 180px 0;
+    background: url('img/bg-signup.jpg') no-repeat;
+    background: linear-gradient(to bottom, rgba(22, 22, 22, .1) 0, rgba(22, 22, 22, .5) 75%, #161616 100%), url('/img/bg-signup.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact i {
+    color: #fff;
+}
+
+.contact h4 {
+    margin: 6px 0;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.contact div {
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+
+.contact input[type=email] {
+    width: 30%;
+    padding: 18px 0;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.contact input::placeholder {
+    padding-left: 10px;
+}
+
+.contact .btn {
+    margin-left: 5px;
+    padding: 17px 36px;
+    background: #64a19d;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+footer {
+    width: 100%;
+    padding: 70px 0;
+    background: #161616;
+}
+
+footer .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 30px 0;
+    background: #fff;
+    border-bottom: 4px solid #64a19d;
+    border-radius: 4px;
+    text-align: center;
+}
+
+footer .footer-card i {
+    color: #64a19d;
+}
+
+footer .footer-card h6 {
+    margin: 4px 0 24px 0;
+    text-transform: uppercase;
+}
+
+footer .footer-card hr {
+    width: 12%;
+    border: 2px solid #64a19d;
+}
+
+footer .footer-card p {
+    color: rgba(0, 0, 0, .5);
+}
+
+footer .footer-card a {
+    color: #64a19d;
+    text-decoration: none;
+    transition: .4s ease-in-out;
+}
+
+footer .footer-card a:hover {
+    color: #000;
+}
+
+footer .footer-bottom {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .footer-bottom i {
+    margin: 26px 6px;
+    padding: 16px;
+    background: rgba(255, 255, 255, .1);
+    color: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+footer .footer-bottom i:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+footer .footer-bottom p {
+    margin: 80px 0 0 0;
+    color: rgba(255, 255, 255, .3);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media(max-width: 720px) {
+    .projects .container {
+        max-width: 90%;
+        flex-direction: column;
+    }
+    .projects .projects-text {
+        max-width: 80%;
+        margin: 20px 0;
+        border: none;
+    }
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .footer-card {
+        margin: 20px 0;
+        max-width: 60%;
+    }
+}
+
+@media(min-width: 721px) and (max-width: 1060px) {
+    .projects .container {
+        max-width: 90%;
+        justify-content: space-evenly;
+    }
+    footer .container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    footer .footer-card {
+        margin: 20px 0;
+        max-width: 40%;
+    }
+}
+
+@media(max-width: 900px) {
+    #burger {
+        display: block;
+    }
+    nav .container {
+        justify-content: flex-end;
+    }
+    nav .list a {
+        margin: 0 20px;
+    }
+    nav .list.show, nav .logo {
+        display: none;
+    }
+    .main h1 {
+        font-size: 60px;
+    }
+    .main .btn {
+        margin: 20px 0 0 0;
+    }
+    .about .container {
+        max-width: 95%;
+    }
+}
+
+@media(max-width: 950px) {
+    .project-cards .box {
+        max-width: 95%;
+        margin: 20px 0;
+    }
+    .contact div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact input[type=email] {
+        width: 60%;
+    }
+    .contact .btn {
+        margin: 10px 0 0 0;
+    }
+}
+
+@media(max-width: 1061px) {
+    nav .container {
+        max-width: 90%;
+    }
+    footer .footer-bottom p {
+        margin: 0;
+    }
+}
